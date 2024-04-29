@@ -1,0 +1,2 @@
+#!/bin/bash
+openvpn3 session-start --config $HOME/.config/openvpn/ikomm.ovpn

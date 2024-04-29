@@ -1,0 +1,2 @@
+#!/bin/bash
+openvpn3 session-manage --config $HOME/.config/openvpn/ikomm.ovpn --disconnect

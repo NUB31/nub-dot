@@ -14,4 +14,7 @@ cd dotfiles
 # This means that this directory must be located in the home folder
 sudo apt install stow -y
 stow --adopt .
+
+# Make binaries executable
+chmod +x .local/bin/*
 ```
