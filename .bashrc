@@ -23,3 +23,5 @@ eval "$(starship init bash)"
 
 # init z
 source ~/.local/bin/z.sh
+# EpIc HaCkEr StUfF
+fastfetch
