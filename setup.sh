@@ -17,6 +17,9 @@ chmod +x .local/bin/*
 sudo cp .bin/hyprpaper /usr/bin/hyprpaper
 
 # Install fonts
-sudo apt install fonts-jetbrains-mono
-sudo apt install fonts-font-awesome
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip
+unzip JetBrainsMono.zip -d $HOME/.local/share/fonts/JetBrainsMono
+rm JetBrainsMono.zip
+
+# Install cursor theme
 sudo apt install bibata-cursor-theme

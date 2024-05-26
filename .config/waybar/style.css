@@ -1,6 +1,8 @@
 * {
 	border: none;
-	font-family: "JetbrainsMono Nerd Font Medium";
+	font-family: "JetbrainsMono Nerd Font";
+	font-weight: 700;
+	letter-spacing: 1px;
 	font-size: 14px;
 	color: #161320;
 }
@@ -90,9 +92,11 @@ window#waybar.hidden {
 	font-size: 18px;
 	color: #89DCEB;
 	background: #161320;
+	padding-right: 18px;
 }
 
 #custom-power {
 	font-size: 16px;
 	background: #F28FAD;
+	padding-right: 14px;
 }

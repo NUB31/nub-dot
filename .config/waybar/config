@@ -25,7 +25,7 @@
 		"tooltip": false,
 		"scroll-step": 5,
 		"format": "{icon} {volume}%",
-		"format-muted": " {volume}%",
+		"format-muted": " {volume}%",
 		"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
 		"format-icons": {
 			"default": [
@@ -37,10 +37,10 @@
 	},
 	"network": {
 		"format-wifi": " {ipaddr}/{cidr}",
-		"format-ethernet": " {ipaddr}/{cidr}",
+		"format-ethernet": " {ipaddr}/{cidr}",
 		"tooltip-format": "{essid} ({signalStrenvvvvvvvgth}%)",
-		"format-linked": "{ifname} (No IP) ",
-		"format-disconnected": "",
+		"format-linked": "{ifname} (No IP) 󱘖",
+		"format-disconnected": "",
 		"format-alt": "{ifname}: {ipaddr}/{cidr}"
 	},
 	"battery": {
@@ -50,7 +50,7 @@
 			"critical": 20
 		},
 		"format": "{icon} {capacity}%",
-		"format-charging": " {capacity}%",
+		"format-charging": "󰂄 {capacity}%",
 		"format-plugged": " {capacity}%",
 		"format-alt": "{time} {icon}",
 		"format-icons": [
@@ -66,20 +66,20 @@
 		"spacing": 10
 	},
 	"clock": {
-		"format": "{: %I:%M %p   %d/%m/%Y}"
+		"format": "{:󰥔 %I:%M %p   %d/%m/%Y}"
 	},
 	"cpu": {
 		"interval": 5,
-		"format": " {}%",
+		"format": " {}%",
 		"max-length": 10
 	},
 	"memory": {
 		"interval": 5,
-		"format": " {}%"
+		"format": " {}%"
 	},
 	"custom/lang": {
 		"tooltip": false,
-		"format": " {}",
+		"format": "󰌌 {}",
 		"exec": "hyprctl devices | grep \"royuan-keydous-nj80-ap500$\" -A 3 | grep \"active keymap\" | cut -f3 -d \" \"",
 		"interval": 1
 	},
@@ -89,7 +89,7 @@
 		"on-click-right": "killall rofi"
 	},
 	"custom/power": {
-		"format": "",
+		"format": "⏻",
 		"on-click": "killall Hyprland"
 	},
 	// The code following below is given in the great documentation for Waybar status bar under Useful Utilities in Hyprland wiki
