@@ -19,3 +19,4 @@ sudo cp .bin/hyprpaper /usr/bin/hyprpaper
 # Install fonts
 sudo apt install fonts-jetbrains-mono
 sudo apt install fonts-font-awesome
+sudo apt install bibata-cursor-theme
