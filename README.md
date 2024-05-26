@@ -17,4 +17,6 @@ stow --adopt .
 
 # Make binaries executable
 chmod +x .local/bin/*
+
+sh ./setup.sh
 ```

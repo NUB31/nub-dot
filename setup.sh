@@ -10,3 +10,8 @@ stow --adopt .
 
 # Restore merged symlinks
 git restore . 
+
+chmod +x .local/bin/*
+
+# Install hyprpaper
+sudo cp .bin/hyprpaper /usr/bin/hyprpaper

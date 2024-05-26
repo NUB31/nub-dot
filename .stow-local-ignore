@@ -2,6 +2,8 @@
 \.gitignore
 \.gitmodules
 
+\.bin
+
 ^/README.*
 ^/LICENSE.*
 ^/setup.sh
