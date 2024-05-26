@@ -22,4 +22,6 @@ unzip JetBrainsMono.zip -d $HOME/.local/share/fonts/JetBrainsMono
 rm JetBrainsMono.zip
 
 # Install cursor theme
-sudo apt install bibata-cursor-theme
+wget https://github.com/ful1e5/Bibata_Cursor/releases/download/v2.0.6/Bibata-Modern-Ice.tar.xz
+tar -xf Bibata-Modern-Ice.tar.xz --directory $HOME/.local/share/icons
+rm Bibata-Modern-Ice.tar.xz
