@@ -15,3 +15,7 @@ chmod +x .local/bin/*
 
 # Install hyprpaper
 sudo cp .bin/hyprpaper /usr/bin/hyprpaper
+
+# Install fonts
+sudo apt install fonts-jetbrains-mono
+sudo apt install fonts-font-awesome
