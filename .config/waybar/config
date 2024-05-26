@@ -14,7 +14,7 @@
 		"hyprland/workspaces"
 	],
 	"modules-right": [
-		"backlight",
+		"custom/lang",
 		"pulseaudio",
 		"clock",
 		"battery",
@@ -42,13 +42,6 @@
 		"format-disconnected": "⚠",
 		"format-alt": "{ifname}: {ipaddr}/{cidr}"
 	},
-	"backlight": {
-		"tooltip": false,
-		"format": " {}%",
-		"interval": 1,
-		"on-scroll-up": "light -A 5",
-		"on-scroll-down": "light -U 5"
-	},
 	"battery": {
 		"states": {
 			"good": 95,
@@ -75,14 +68,19 @@
 		"format": "{: %I:%M %p   %d/%m/%Y}"
 	},
 	"cpu": {
-		"interval": 15,
+		"interval": 5,
 		"format": " {}%",
 		"max-length": 10
 	},
 	"memory": {
-		"interval": 30,
+		"interval": 5,
 		"format": " {}%",
 		"max-length": 10
+	},
+	"custom/lang": {
+		"format": " {}",
+		"exec": "hyprctl devices | grep \"royuan-keydous-nj80-ap500$\" -A 3 | grep \"active keymap\" | cut -f3 -d \" \"",
+		"interval": 1
 	},
 	"custom/launcher": {
 		"format": "",
@@ -91,7 +89,7 @@
 	},
 	"custom/power": {
 		"format": " ",
-		"on-click": "bash -c \"killall Hyprland\""
+		"on-click": "killall Hyprland"
 	},
 	// The code following below is given in the great documentation for Waybar status bar under Useful Utilities in Hyprland wiki
 	"hyrpland/workspaces": {
