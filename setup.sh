@@ -39,3 +39,8 @@ Pin-Priority: -1
 ' | sudo tee /etc/apt/preferences.d/mozilla-firefox
 sudo snap remove firefox
 sudo apt install -y firefox
+
+# Install wofi
+sudo apt purge -y rofi
+sudo apt autoremove
+sudo apt install wofi
