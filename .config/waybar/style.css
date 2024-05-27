@@ -20,6 +20,15 @@ window#waybar.hidden {
   opacity: 0.2;
 }
 
+tooltip {
+  background-color: #161320;
+  border-radius: 10px;
+}
+
+tooltip * {
+  color: white;
+}
+
 #network,
 #pulseaudio,
 #battery,
