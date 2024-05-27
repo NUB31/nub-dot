@@ -70,8 +70,7 @@
 	},
 	"cpu": {
 		"interval": 5,
-		"format": " {}%",
-		"max-length": 10
+		"format": " {}%"
 	},
 	"memory": {
 		"interval": 5,
@@ -85,7 +84,7 @@
 	},
 	"custom/launcher": {
 		"format": "",
-		"on-click": "rofi -show drun",
+		"on-click": "wofi -show drun",
 		"on-click-right": "killall rofi"
 	},
 	"custom/power": {
