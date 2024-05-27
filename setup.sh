@@ -10,11 +10,7 @@ stow --adopt .
 
 # Restore merged symlinks
 git restore . 
-
 chmod +x .local/bin/*
-
-# Install hyprpaper
-sudo cp .bin/hyprpaper /usr/bin/hyprpaper
 
 # Install fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip
@@ -44,3 +40,17 @@ sudo apt install -y firefox
 sudo apt purge -y rofi
 sudo apt autoremove
 sudo apt install wofi
+
+# Install nwg-displays
+git clone https://github.com/nwg-piotr/nwg-displays.git
+cd nwg-displays
+sudo sh install.sh
+cd ../
+sudo rm -rf nwg-displays
+
+# Install hyprpaper
+wget https://github.com/hyprwm/hyprpaper/releases/download/v0.7.0/v0.7.0.tar.gz
+tar -xf v0.7.0.tar.gz
+rm v0.7.0.tar.gz
+sudo cp hyprpaper/hyprpaper /usr/bin
+rm -rf hyprpaper
