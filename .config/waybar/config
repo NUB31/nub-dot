@@ -62,7 +62,7 @@
   "custom/lang": {
     "tooltip": false,
     "format": "󰌌 {}",
-    "exec": "hyprctl devices | grep \"royuan-keydous-nj80-ap500$\" -A 3 | grep \"active keymap\" | cut -f3 -d \" \"",
+    "exec": "hyprctl devices | grep \"keychron-keychron-v1$\" -A 3 | grep \"active keymap\" | cut -f3 -d \" \"",
     "interval": 1
   },
   "custom/launcher": {
