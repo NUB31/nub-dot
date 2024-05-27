@@ -1,8 +1,11 @@
+# Update packages
+sudo apt update
+sudo apt upgrade -y
+
 # Install starship
 curl -sS https://starship.rs/install.sh | sh
 
 # Install stow
-sudo apt update
 sudo apt install stow -y
 
 # Create symlinks between parents and here
@@ -21,6 +24,14 @@ rm JetBrainsMono.zip
 wget https://github.com/ful1e5/Bibata_Cursor/releases/download/v2.0.6/Bibata-Modern-Ice.tar.xz
 tar -xf Bibata-Modern-Ice.tar.xz --directory $HOME/.local/share/icons
 rm Bibata-Modern-Ice.tar.xz
+
+# Install microsoft edge - For work purposes - Install before firefox so firefox becomes the default browser
+curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
+sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
+sudo rm microsoft.gpg
+sudo apt update && sudo apt install microsoft-edge-stable
+sudo rm /etc/apt/sources.list.d/microsoft-edge-dev.list
 
 # Install firefox
 sudo add-apt-repository -y ppa:mozillateam/ppa
