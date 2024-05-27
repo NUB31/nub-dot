@@ -21,17 +21,18 @@
     "format": "{icon} {volume}%",
     "format-muted": " {volume}%",
     "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click-right": "pavucontrol",
     "format-icons": {
       "default": ["", "", ""]
     }
   },
   "network": {
+    "format-alt": "{ifname}: ({essid}) - {ipaddr}/{cidr}",
     "format-wifi": " {ipaddr}/{cidr}",
     "format-ethernet": " {ipaddr}/{cidr}",
-    "tooltip-format": "{essid} ({signalStrenvvvvvvvgth}%)",
-    "format-linked": "{ifname} (No IP) 󱘖",
-    "format-disconnected": "",
-    "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    "format-linked": "{ifname} (No IP)",
+    "format-disconnected": "󱘖 (No IP)",
+    "tooltip-format": "{essid} ({signalStrength}%)"
   },
   "battery": {
     "states": {
