@@ -25,3 +25,17 @@ rm JetBrainsMono.zip
 wget https://github.com/ful1e5/Bibata_Cursor/releases/download/v2.0.6/Bibata-Modern-Ice.tar.xz
 tar -xf Bibata-Modern-Ice.tar.xz --directory $HOME/.local/share/icons
 rm Bibata-Modern-Ice.tar.xz
+
+# Install firefox
+sudo add-apt-repository -y ppa:mozillateam/ppa
+echo '
+Package: *
+Pin: release o=LP-PPA-mozillateam
+Pin-Priority: 1001
+
+Package: firefox
+Pin: version 1:1snap*
+Pin-Priority: -1
+' | sudo tee /etc/apt/preferences.d/mozilla-firefox
+sudo snap remove firefox
+sudo apt install -y firefox
