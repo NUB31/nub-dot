@@ -72,7 +72,7 @@
   },
   "custom/power": {
     "format": "⏻",
-    "on-click": "killall Hyprland"
+    "on-click": "wlogout --protocol layer-shell -b 4"
   },
   // The code following below is given in the great documentation for Waybar status bar under Useful Utilities in Hyprland wiki
   "hyrpland/workspaces": {
