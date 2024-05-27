@@ -1,23 +1,23 @@
 * {
-	border: none;
-	font-family: "JetbrainsMono Nerd Font";
-	font-weight: 700;
-	letter-spacing: 1px;
-	font-size: 14px;
-	color: #161320;
+  border: none;
+  font-family: "JetbrainsMono Nerd Font";
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 14px;
+  color: #161320;
 }
 
 #workspaces button:hover {
-	box-shadow: inherit;
-	text-shadow: inherit;
-  }
+  box-shadow: inherit;
+  text-shadow: inherit;
+}
 
 window#waybar {
-	background: transparent;
+  background: transparent;
 }
 
 window#waybar.hidden {
-	opacity: 0.2;
+  opacity: 0.2;
 }
 
 #network,
@@ -30,73 +30,73 @@ window#waybar.hidden {
 #custom-lang,
 #custom-launcher,
 #custom-power {
-	padding: 5px 14px;
-	border-radius: 10px;
-	margin: 0 5px;
+  padding: 5px 14px;
+  border-radius: 10px;
+  margin: 0 5px;
 }
 
 #network {
-	background: #bd93f9;
+  background: #bd93f9;
 }
 
 #pulseaudio {
-	background: #E8A2AF;
+  background: #e8a2af;
 }
 
 #battery {
-	background: #B5E8E0;
+  background: #b5e8e0;
 }
 
 #battery.charging,
 #battery.plugged {
-	background-color: #B5E8E0;
+  background-color: #b5e8e0;
 }
 
 #battery.critical:not(.charging) {
-	background-color: #B5E8E0;
-	animation-name: blink;
-	animation-duration: 0.5s;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
-	animation-direction: alternate;
+  background-color: #b5e8e0;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 @keyframes blink {
-	to {
-		background-color: #BF616A;
-		color: #B5E8E0;
-	}
+  to {
+    background-color: #bf616a;
+    color: #b5e8e0;
+  }
 }
 
 #clock {
-	background: #ABE9B3;
+  background: #abe9b3;
 }
 
 #memory {
-	background: #DDB6F2;
+  background: #ddb6f2;
 }
 
 #cpu {
-	background: #96CDFB;
+  background: #96cdfb;
 }
 
 #tray {
-	background: #161320;
+  background: #161320;
 }
 
 #custom-lang {
-	background: #effab0;
+  background: #effab0;
 }
 
 #custom-launcher {
-	font-size: 18px;
-	color: #89DCEB;
-	background: #161320;
-	padding-right: 18px;
+  font-size: 20px;
+  color: #89dceb;
+  background: #161320;
+  padding-right: 18px;
 }
 
 #custom-power {
-	font-size: 16px;
-	background: #F28FAD;
-	padding-right: 14px;
+  font-size: 16px;
+  background: #f28fad;
+  padding-right: 18px;
 }

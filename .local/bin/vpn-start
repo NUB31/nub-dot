@@ -1,2 +1,28 @@
 #!/bin/bash
-openvpn3 session-start --config $HOME/.config/openvpn/config.ovpn
+
+# Define the directory where OpenVPN config files are stored
+config_dir="$HOME/.config/openvpn/"
+
+# Check if the directory exists
+if [ ! -d "$config_dir" ]; then
+    echo "OpenVPN config directory not found: $config_dir"
+    exit 1
+fi
+
+# Get a list of .ovpn files in the config directory
+ovpn_files=$(find "$config_dir" -type f -name "*.ovpn")
+
+# Check if any .ovpn files were found
+if [ -z "$ovpn_files" ]; then
+    echo "No OpenVPN configuration files found in $config_dir"
+    exit 1
+fi
+
+# Iterate over each .ovpn file and start an OpenVPN session
+for file in $ovpn_files; do
+    echo "Starting OpenVPN session with $file"
+    openvpn3 session-start --config "$file"
+done
+
+exit 0
+
