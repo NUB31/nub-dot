@@ -36,7 +36,8 @@ tooltip * {
 #memory,
 #cpu,
 #tray,
-#custom-lang,
+#custom-keyboard-layout-work,
+#custom-keyboard-layout-home,
 #custom-launcher,
 #custom-power {
   padding: 5px 14px;
@@ -106,7 +107,11 @@ tooltip * {
   color: #161320;
 }
 
-#custom-lang {
+#custom-keyboard-layout-work {
+  background: #effab0;
+}
+
+#custom-keyboard-layout-home {
   background: #effab0;
 }
 
