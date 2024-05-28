@@ -63,5 +63,12 @@ sudo rm -rf nwg-displays
 wget https://github.com/hyprwm/hyprpaper/releases/download/v0.7.0/v0.7.0.tar.gz
 tar -xf v0.7.0.tar.gz
 rm v0.7.0.tar.gz
-sudo cp hyprpaper/hyprpaper /usr/bin
+sudo mv hyprpaper/hyprpaper /usr/bin
 rm -rf hyprpaper
+
+# Install hyprpicker
+wget https://github.com/hyprwm/hyprpicker/releases/download/v0.2.0/v0.2.0.tar.gz
+tar -xf v0.2.0.tar.gz
+rm v0.2.0.tar.gz
+sudo mv hyprpicker/hyprpicker /usr/bin
+rm -rf hyprpicker
