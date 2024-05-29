@@ -1,18 +1,21 @@
 # Update packages
-sudo apt update
-sudo apt upgrade -y
+sudo apt-get update
+sudo apt-get upgrade -y
+
+# Install prefrerred packages
+sudo apt-get install grim stow slurp -y
+
+# Set up required directories
+mkdir -p "$HOME/screenshots"
 
 # Install starship
 curl -sS https://starship.rs/install.sh | sh
-
-# Install stow
-sudo apt install stow -y
 
 # Create symlinks between parents and here
 stow --adopt .
 
 # Restore merged symlinks
-git restore . 
+git restore .
 chmod +x .local/bin/*
 
 # Install fonts
@@ -26,7 +29,7 @@ tar -xf Bibata-Modern-Ice.tar.xz --directory $HOME/.local/share/icons
 rm Bibata-Modern-Ice.tar.xz
 
 # Install microsoft edge - For work purposes - Install before firefox so firefox becomes the default browser
-curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor >microsoft.gpg
 sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
 sudo rm microsoft.gpg
