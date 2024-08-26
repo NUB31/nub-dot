@@ -3,7 +3,7 @@ sudo apt-get update
 sudo apt-get upgrade -y
 
 # Install prefrerred packages
-sudo apt-get install grim stow slurp -y
+sudo apt-get install grim stow slurp cliphist -y
 
 # Set up required directories
 mkdir -p "$HOME/screenshots"
