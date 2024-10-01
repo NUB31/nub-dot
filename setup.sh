@@ -3,7 +3,7 @@ sudo apt-get update
 sudo apt-get upgrade -y
 
 # Install prefrerred packages
-sudo apt-get install grim stow slurp cliphist sway wofi nwg-displays nwg-look hyprland dunst pavucontrol pamixer thunar -y
+sudo apt-get install grim stow slurp cliphist sway wofi nwg-displays nwg-look hyprland dunst pavucontrol pamixer thunar libhyprutils-dev libhyprlang-dev -y
 
 # Set up required directories
 mkdir -p "$HOME/screenshots"
@@ -52,19 +52,32 @@ Pin-Priority: -1
 sudo snap remove firefox
 sudo apt install -y --allow-downgrades firefox
 
+# Fix broken lib (reomve in future)
+sudo ln -s /usr/lib/x86_64-linux-gnu/libhyprlang.so.0.5.2 /usr/lib/libhyprlang.so.1
+sudo ln -s /usr/lib/x86_64-linux-gnu/libhyprutils.so.0.1.5 /usr/lib/libhyprutils.so.1
+
 # Install hyprpaper
-wget https://github.com/hyprwm/hyprpaper/releases/download/v0.7.1/v0.7.1.tar.gz
-tar -xf v0.7.1.tar.gz
-rm v0.7.1.tar.gz
+sudo rm /usr/bin/hyprpaper
+wget https://github.com/hyprwm/hyprpaper/releases/download/v0.7.0/v0.7.0.tar.gz
+tar -xf v0.7.0.tar.gz
+rm v0.7.0.tar.gz
 sudo mv hyprpaper/hyprpaper /usr/bin
 rm -rf hyprpaper
 
 # Install hyprpicker
-rm /usr/bin/hyprpicker
+sudo rm /usr/bin/hyprpicker
 wget https://github.com/hyprwm/hyprpicker/releases/download/v0.4.1/v0.4.1.tar.gz
 tar -xf v0.4.1.tar.gz
 rm v0.4.1.tar.gz
 sudo mv hyprpicker/hyprpicker /usr/bin
 rm -rf hyprpicker
+
+# Install hyprlock
+sudo rm /usr/bin/hyprlock
+wget https://github.com/hyprwm/hyprlock/releases/download/v0.4.0/v0.4.0.tar.gz
+tar -xf v0.4.0.tar.gz
+rm v0.4.0.tar.gz
+sudo mv hyprlock/hyprlock /usr/bin
+rm -rf hyprlock
 
 sudo apt autoremove
