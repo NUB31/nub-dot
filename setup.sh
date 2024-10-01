@@ -3,7 +3,7 @@ sudo apt-get update
 sudo apt-get upgrade -y
 
 # Install prefrerred packages
-sudo apt-get install grim stow slurp cliphist sway wofi nwg-displays nwg-look hyprland -y
+sudo apt-get install grim stow slurp cliphist sway wofi nwg-displays nwg-look hyprland dunst pavucontrol pamixer thunar -y
 
 # Set up required directories
 mkdir -p "$HOME/screenshots"
@@ -17,6 +17,7 @@ stow --adopt .
 # Restore merged symlinks
 git restore .
 chmod +x .local/bin/*
+chmod +x ~/.config/waybar/mouse.sh
 
 # Install fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip
