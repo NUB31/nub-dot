@@ -73,7 +73,7 @@ tooltip {
   background: rgba(22, 19, 32, 0.9);
   margin: 6px 0px 6px 0px;
   padding-left: 4px;
-  padding-right: 4px;
+  margin-right: 24px;
 }
 
 #clock {
