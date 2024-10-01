@@ -31,4 +31,4 @@ export NVM_DIR="$HOME/.nvm"
 
 export XDG_DOWNLOAD_DIR="$HOME/Downloads"
 
-export PATH="$HOME/.dotnet:$HOME/.local/bin:$PATH"
+export PATH="$HOME/.dotnet:$HOME/.local/bin:$HOME/.cargo/bin/:$PATH"
