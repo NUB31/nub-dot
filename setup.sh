@@ -3,7 +3,7 @@ sudo apt-get update
 sudo apt-get upgrade -y
 
 # Install prefrerred packages
-sudo apt-get install grim stow slurp cliphist -y
+sudo apt-get install grim stow slurp cliphist sway wofi nwg-displays nwg-look hyprland -y
 
 # Set up required directories
 mkdir -p "$HOME/screenshots"
@@ -24,7 +24,8 @@ unzip JetBrainsMono.zip -d $HOME/.local/share/fonts/JetBrainsMono
 rm JetBrainsMono.zip
 
 # Install cursor theme
-wget https://github.com/ful1e5/Bibata_Cursor/releases/download/v2.0.6/Bibata-Modern-Ice.tar.xz
+mkdir -p $HOME/.local/share/icons
+wget https://github.com/ful1e5/Bibata_Cursor/releases/download/v2.0.4/Bibata-Modern-Ice.tar.xz
 tar -xf Bibata-Modern-Ice.tar.xz --directory $HOME/.local/share/icons
 rm Bibata-Modern-Ice.tar.xz
 
@@ -48,30 +49,21 @@ Pin: version 1:1snap*
 Pin-Priority: -1
 ' | sudo tee /etc/apt/preferences.d/mozilla-firefox
 sudo snap remove firefox
-sudo apt install -y firefox
-
-# Install wofi
-sudo apt purge -y rofi
-sudo apt autoremove
-sudo apt install wofi
-
-# Install nwg-displays
-git clone https://github.com/nwg-piotr/nwg-displays.git
-cd nwg-displays
-sudo sh install.sh
-cd ../
-sudo rm -rf nwg-displays
+sudo apt install -y --allow-downgrades firefox
 
 # Install hyprpaper
-wget https://github.com/hyprwm/hyprpaper/releases/download/v0.7.0/v0.7.0.tar.gz
-tar -xf v0.7.0.tar.gz
-rm v0.7.0.tar.gz
+wget https://github.com/hyprwm/hyprpaper/releases/download/v0.7.1/v0.7.1.tar.gz
+tar -xf v0.7.1.tar.gz
+rm v0.7.1.tar.gz
 sudo mv hyprpaper/hyprpaper /usr/bin
 rm -rf hyprpaper
 
 # Install hyprpicker
-wget https://github.com/hyprwm/hyprpicker/releases/download/v0.2.0/v0.2.0.tar.gz
-tar -xf v0.2.0.tar.gz
-rm v0.2.0.tar.gz
+rm /usr/bin/hyprpicker
+wget https://github.com/hyprwm/hyprpicker/releases/download/v0.4.1/v0.4.1.tar.gz
+tar -xf v0.4.1.tar.gz
+rm v0.4.1.tar.gz
 sudo mv hyprpicker/hyprpicker /usr/bin
 rm -rf hyprpicker
+
+sudo apt autoremove
