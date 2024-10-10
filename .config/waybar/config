@@ -167,6 +167,7 @@
     "format-muted": "婢",
     "tooltip-format": "{icon} {desc} // {volume}%",
     "scroll-step": 5,
+    "on-click-right": "pavucontrol",
     "format-icons": {
       "headphone": " ",
       "hands-free": " ",
