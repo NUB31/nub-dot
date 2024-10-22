@@ -30,5 +30,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export XDG_DOWNLOAD_DIR="$HOME/Downloads"
+export DOTNET_ROOT="$HOME/.dotnet"
 
-export PATH="$HOME/.dotnet:$HOME/.local/bin:$HOME/.cargo/bin/:$PATH"
+export PATH="$HOME/.dotnet:$HOME/.local/bin:$HOME/.cargo/bin/:$HOME/.dotnet/tools:$HOME/.dotnet:$PATH"
