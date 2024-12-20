@@ -33,3 +33,4 @@ export XDG_DOWNLOAD_DIR="$HOME/Downloads"
 export DOTNET_ROOT="$HOME/.dotnet"
 
 export PATH="$HOME/.dotnet:$HOME/.local/bin:$HOME/.cargo/bin/:$HOME/.dotnet/tools:$HOME/.dotnet:$PATH"
+. "$HOME/.cargo/env"
