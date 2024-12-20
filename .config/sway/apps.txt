@@ -1,4 +1,0 @@
-sway
-swayidle
-swaylock
-fuzzel
