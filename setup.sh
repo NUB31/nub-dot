@@ -3,6 +3,6 @@ sudo apt-get update
 sudo apt-get upgrade -y
 
 stow --adopt .
-git restore --hard
+git reset --hard
 
 sudo apt autoremove
