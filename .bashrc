@@ -1,31 +1,16 @@
-#
-# ~/.bashrc
-#
-
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
+#!/bin/bash
 
 PS1='[\u@\h \W]\$ '
 
-# define aliases
-alias grep="grep --color=auto"
-alias ls="ls --color=auto"
-alias k="kubectl"
-alias ll="ls -la --color=auto"
-alias pat="cat ~/.bak/PAT | clip"
-alias gut="cleanbranches"
-alias config="nano ~/.bashrc"
-alias fucking="sudo"
-alias pat="cat ~/.bak/PAT"
+source .bashrc-path
+source .bashrc-alias
 
-# define functions
-cleanbranches(){
-	git fetch -p && for branch in $(git for-each-ref --format '%(refname) %(upstream:track)' refs/heads | awk '$2 == "[gone]" {sub("refs/heads/", "", $1); print $1}' ) ; do git branch -D $branch ; done
-}
+# Use bash completion if installed
+if [[ "$PS1" && -f /usr/share/bash-completion/bash_completion ]]; then
+	source /usr/share/bash-completion/bash_completion
+fi
 
-# init starship
-export STARSHIP_CONFIG=~/.config/starship.toml
-eval "$(starship init bash)"
-
-# use bash-completion, if available
-[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && . /usr/share/bash-completion/bash_completion
+# Init starship
+if command -v starship > /dev/null; then
+	eval "$(starship init bash)"
+fi
