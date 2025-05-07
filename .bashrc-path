@@ -12,3 +12,7 @@ export NVM_DIR="$HOME/.nvm"
 # dotnet
 export DOTNET_ROOT="$HOME/.dotnet"
 export PATH="$DOTNET_ROOT:$PATH"
+
+# tmp
+export PATH="$PATH:/home/oliste/repos/nub-lang/src/compiler/Nub.Lang/bin/Release/net9.0/linux-x64/publish"
+
