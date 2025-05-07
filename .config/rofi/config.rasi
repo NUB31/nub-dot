@@ -1,0 +1,5 @@
+@theme "./themes/onedark/style.rasi"
+
+configuration {
+	font: "JetBrainsMono Nerd Font 12";
+}

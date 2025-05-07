@@ -2,8 +2,8 @@
 
 PS1='[\u@\h \W]\$ '
 
-source .bashrc-path
-source .bashrc-alias
+source "$HOME/.bashrc-path"
+source "$HOME/.bashrc-alias"
 
 # Use bash completion if installed
 if [[ "$PS1" && -f /usr/share/bash-completion/bash_completion ]]; then
