@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+# dotnet
+export DOTNET_ROOT="$HOME/.dotnet"
+export PATH="$DOTNET_ROOT:$PATH"
+
+# tmp
+export PATH="$PATH:/home/oliste/repos/nub-lang/src/compiler/Nub.Lang/bin/Release/net9.0/linux-x64/publish"
+
