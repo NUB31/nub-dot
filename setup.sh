@@ -1,9 +1,13 @@
 #!/bin/bash
 
-curl -sS https://starship.rs/install.sh | sh
+set -e
 
-sudo pacman -Syu --noconfirm
-sudo pacman -S --noconfirm \
+if ! command -v yay 2>&1 >/dev/null
+then
+    curl -sS https://starship.rs/install.sh | sh
+fi
+
+sudo pacman -Syu --noconfirm \
     code \
     alacritty \
     thunar \
@@ -32,8 +36,7 @@ then
     rm -rf yay-bin
 fi
 
-yay -Syu --noconfirm
-yay -S --noconfirm  \
+yay -Syu --noconfirm  \
     hyprpaper-git \
     hyprpicker-git \
     hypridle-git \
