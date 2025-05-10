@@ -31,6 +31,9 @@
         "icon": "true",
         "tooltip": false
     },
+    "tray": {
+        "spacing": 8
+    },
     "clock": {
         "format": "{:%I:%M %p}",
         "tooltip": false
