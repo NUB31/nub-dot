@@ -1,14 +1,26 @@
 #!/bin/bash
 
-stow . --adopt
-git reset --hard
+curl -sS https://starship.rs/install.sh | sh
 
 sudo pacman -Syu --noconfirm
 sudo pacman -S --noconfirm \
-    librewolf \
     code \
     alacritty \
-    thunar
+    thunar \
+    ttf-jetbrains-mono-nerd \
+    ttf-font-awesome \
+    stow \
+    nwg-look \
+    nwg-displays \
+    cmake \
+    meson \
+    cpio \
+    network-manager-applet \
+    nm-connection-editor \
+    pavucontrol \
+    wl-clipboard \
+    orchis-theme \
+    swaync
 
 if ! command -v yay 2>&1 >/dev/null
 then
@@ -37,7 +49,9 @@ yay -S --noconfirm  \
     aquamarine-git \
     hyprgraphics-git \
     hyprland-qtutils-git \
-    rofi-lbonn-wayland-git
+    hyprland-git \
+    rofi-lbonn-wayland-git \
+    librewolf-bin
 
 hyprpm add https://github.com/Duckonaut/split-monitor-workspaces
 hyprpm enable split-monitor-workspaces

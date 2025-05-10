@@ -6,7 +6,7 @@
     "passthrough": false,
     "gtk-layer-shell": true,
     "height": 50,
-    "modules-left": ["custom/launch_wofi","hyprland/workspaces","cpu","memory","disk","clock"],
+    "modules-left": ["custom/launch_rofi","hyprland/workspaces","cpu","memory","disk","clock"],
     "modules-center": ["wlr/taskbar"],
     "modules-right": ["network","battery","backlight","pulseaudio","pulseaudio#microphone","tray"],
     
@@ -15,9 +15,9 @@
         "format": "{}"
     },
 
-    "custom/launch_wofi": {
+    "custom/launch_rofi": {
         "format": "",
-        "on-click": "sh -c '(killall wofi; wofi --show drun)' & disown",
+        "on-click": "sh -c 'rofi -show drun -config ~/.config/rofi/config.rasi' & disown",
         "tooltip": false
     },
 

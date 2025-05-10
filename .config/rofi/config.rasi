@@ -3,3 +3,7 @@
 configuration {
 	font: "JetBrainsMono Nerd Font 12";
 }
+
+* {
+    color1: #191414;
+}
