@@ -1,16 +1,23 @@
 * {
-    border: 0;
-    border-radius: 0px;
     font-family: "JetBrainsMono Nerd Font, Font Awesome, monospace";
     font-size: 14px;
-    min-height: 0;
-    border-radius: 0px;
     font-weight: 900;
 }
 
 #waybar {
-    background: #191414;
+    background-color: #191414;
     color: #ABB2BF;
+}
+
+button {
+    border: 0;
+    border-radius: 0px;
+    min-height: 0;
+    border-radius: 0px;
+}
+
+button:hover {
+    background-color: #171414;
 }
 
 #network,
@@ -24,21 +31,22 @@
 }
 
 #workspaces button {
-    color: rgb(255, 255, 255);
     border-bottom: 2px solid transparent;
+    padding-right: 16px;
+    padding-left: 10px;
 }
 
 #workspaces button.active {
     border-bottom: 2px solid #ABB2BF;
 }
 
-#clock {
-    border-bottom: 2px solid #ABB2BF;
-}
-
 #tray {
     padding: 0 8px;
     border-bottom: 2px solid rgb(198, 120, 221);
+}
+
+#tray .needs-attention {
+    background-color: rgb(198, 120, 221);
 }
 
 #network {
@@ -56,6 +64,7 @@
 }
 
 #custom-lock {
+    border-bottom: 2px solid #ABB2BF;
     transition: all 100ms ease-in-out;
     padding-right: 16px;
     padding-left: 12px;
@@ -63,4 +72,5 @@
 
 #custom-lock:hover {
     color: #E06C75;
+    border-color: #E06C75;
 }
