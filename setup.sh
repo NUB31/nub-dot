@@ -24,7 +24,7 @@ sudo pacman -Syu --noconfirm \
     pavucontrol \
     wl-clipboard \
     orchis-theme \
-    swaync
+    brightnessctl
 
 if ! command -v yay 2>&1 >/dev/null
 then
@@ -41,7 +41,6 @@ yay -Syu --noconfirm  \
     hyprpicker-git \
     hypridle-git \
     hyprlock-git \
-    xdg-desktop-portal-hyprland-git \
     hyprpolkitagent-git \
     hyprsysteminfo-git \
     hyprland-qt-support-git \
@@ -49,6 +48,7 @@ yay -Syu --noconfirm  \
     hyprutils-git \
     hyprlang-git \
     hyprwayland-scanner-git \
+    xdg-desktop-portal-hyprland-git \
     aquamarine-git \
     hyprgraphics-git \
     hyprland-qtutils-git \
