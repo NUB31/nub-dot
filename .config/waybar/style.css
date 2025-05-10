@@ -5,8 +5,8 @@
 }
 
 #waybar {
-    background-color: #191414;
-    color: #ABB2BF;
+    background-color: #151515;
+    color: #FFFFFF;
 }
 
 button {
@@ -37,7 +37,7 @@ button:hover {
 }
 
 #workspaces button.active {
-    border-bottom: 2px solid #ABB2BF;
+    border-bottom: 2px solid #FFFFFF;
 }
 
 #tray {
@@ -64,7 +64,7 @@ button:hover {
 }
 
 #custom-lock {
-    border-bottom: 2px solid #ABB2BF;
+    border-bottom: 2px solid #FFFFFF;
     transition: all 100ms ease-in-out;
     padding-right: 16px;
     padding-left: 12px;

@@ -1,6 +1,6 @@
 [window]
 
-opacity = 0.95
+opacity = 1
 
 padding.x = 10
 padding.y = 10
@@ -15,4 +15,4 @@ bold_italic.family = "JetBrainsMono Nerd Font"
 size = 13.0
 
 [colors.primary]
-background = "#191414"
+background = "#151515"

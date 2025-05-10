@@ -1,9 +1,1 @@
-@theme "./themes/onedark/style.rasi"
-
-configuration {
-	font: "JetBrainsMono Nerd Font 12";
-}
-
-* {
-    color1: #191414;
-}
+@theme "./minimal/style.rasi"
