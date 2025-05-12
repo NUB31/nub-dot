@@ -1,6 +1,9 @@
 #!/bin/bash
 
-set -e
+set -e\
+
+mkdir -p ~/.config
+mkdir -p ~/wallpapers
 
 if ! command -v yay 2>&1 >/dev/null
 then
@@ -24,7 +27,8 @@ sudo pacman -Syu --noconfirm \
     pavucontrol \
     wl-clipboard \
     orchis-theme \
-    brightnessctl
+    brightnessctl \
+    mako
 
 if ! command -v yay 2>&1 >/dev/null
 then
